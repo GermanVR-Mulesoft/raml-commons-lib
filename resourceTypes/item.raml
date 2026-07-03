@@ -1,0 +1,27 @@
+#%RAML 1.0 ResourceType
+usage: Apply to resources that represent a single specific item, usually under a URI parameter like /{id}.
+is: [ standard-policy ]
+
+get?:
+  displayName: Get <<resourcePathName | !singularize>> details
+  description: Retrieves the specific information of a <<resourcePathName | !singularize>> by its identifier.
+
+put?:
+  displayName: Replace <<resourcePathName | !singularize>>
+  description: Completely overwrites the record of this <<resourcePathName | !singularize>>.
+
+patch?:
+  displayName: Update <<resourcePathName | !singularize>>
+  description: Partially modifies the record of this <<resourcePathName | !singularize>>.
+
+delete?:
+  displayName: Delete <<resourcePathName | !singularize>>
+  description: Permanently removes the specified <<resourcePathName | !singularize>>.
+
+head?:
+  displayName: Check <<resourcePathName | !singularize>>
+  description: Retrieves the response headers for this <<resourcePathName | !singularize>>.
+
+options?:
+  displayName: <<resourcePathName | !singularize>> options
+  description: Queries the allowed methods for this <<resourcePathName | !singularize>>.

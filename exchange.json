@@ -1,0 +1,13 @@
+{
+  "main": "library.raml",
+  "name": "RAML Commons Library",
+  "classifier": "raml-fragment",
+  "organizationId": "9ab9d867-71c2-4d3a-9e2e-62e07b9fa2f8",
+  "descriptorVersion": "1.0.0",
+  "groupId": "9ab9d867-71c2-4d3a-9e2e-62e07b9fa2f8",
+  "assetId": "raml-commons-lib",
+  "version": "1.0.0",
+  "tags": [],
+  "apiVersion": "v1",
+  "originalFormatVersion": "1.0"
+}

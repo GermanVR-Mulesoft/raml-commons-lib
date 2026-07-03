@@ -1,0 +1,14 @@
+#%RAML 1.0 SecurityScheme
+
+type: x-client-id-enforcement
+description: Client ID Enforcement policy.
+describedBy:
+  headers:
+    client_id:
+      displayName: Client ID
+      description: Client identifier assigned by API Manager.
+      type: string
+    client_secret:
+      displayName: Client Secret
+      description: Client secret assigned by API Manager.
+      type: string

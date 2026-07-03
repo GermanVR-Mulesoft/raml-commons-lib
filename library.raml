@@ -1,0 +1,66 @@
+#%RAML 1.0 Library
+usage: !include README.md
+#
+# ResourceTypes
+#
+resourceTypes:
+  collection: !include resourceTypes/collection.raml
+  item: !include resourceTypes/item.raml
+  health-check: !include resourceTypes/health-check.raml
+
+#
+# Traits
+#
+traits:
+
+  #
+  # Requests
+  #
+  request-json: !include traits/requests/request-json.raml
+  request-multipart: !include traits/requests/request-multipart.raml
+  request-binary: !include traits/requests/request-binary.raml
+  request-xml: !include traits/requests/request-xml.raml
+
+  #
+  # Responses
+  #
+  response-200-json: !include traits/responses/response-200-json.raml
+  response-201-json: !include traits/responses/response-201-json.raml
+  response-202-json: !include traits/responses/response-202-json.raml
+
+  response-204-empty: !include traits/responses/response-204-empty.raml
+  response-200-file: !include traits/responses/response-200-file.raml
+  response-200-xml: !include traits/responses/response-200-xml.raml
+
+  #
+  # Headers
+  #
+  correlation-id: !include traits/headers/correlation-id.raml
+
+  #
+  # Query Parameters
+  #
+  pagination: !include traits/query/pagination.raml
+  sorting: !include traits/query/sorting.raml
+
+  #
+  # Errors
+  #
+  standard-errors: !include traits/errors/standard-errors.raml
+  standard-policy:
+    is: [ standard-errors, correlation-id ]
+
+#
+# SecuritySchemes
+#
+securitySchemes:
+  client-id-enforcement: !include securitySchemes/client-id-enforcement.raml
+  oauth2: !include securitySchemes/oauth2.raml
+
+#
+# Types
+#
+types:
+  ErrorResponse: !include types/ErrorResponse.raml
+  PaginatedResponse: !include types/PaginatedResponse.raml
+  HealthResponse: !include types/HealthResponse.raml

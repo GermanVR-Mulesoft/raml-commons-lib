@@ -1,0 +1,16 @@
+#%RAML 1.0 Trait
+usage: Apply this trait to any GET method that returns a large collection of items to prevent server memory crashes.
+queryParameters:
+  offset?:
+    description: The number of items to skip before starting to collect the result set.
+    type: integer
+    default: 0
+    minimum: 0
+    example: 20
+  limit?:
+    description: The maximum number of items to return in a single response.
+    type: integer
+    default: 50
+    minimum: 1
+    maximum: 100
+    example: 50

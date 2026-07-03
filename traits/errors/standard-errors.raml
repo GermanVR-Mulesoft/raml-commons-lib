@@ -1,0 +1,380 @@
+#%RAML 1.0 Trait
+
+responses:
+  400:
+    description: Bad Request
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 400 Bad Request.
+        displayName: Bad Request Error Response
+        example: |
+          {
+              "namespace":  "GERMANVR-EX-SAPI",
+              "identifier":  "BAD_REQUEST",
+              "description":  "HTTP GET on resource 'https://httpbin.org:443/status/400' failed: bad request (400).",
+              "timestamp":  "2026-07-04T18:39:01.3951155-06:00",
+              "correlationId":  "e96ab7c0-7809-11f1-8438-d8bbc10a9a17",
+              "application":  {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "BAD_REQUEST",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/400' failed: bad request (400).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  401:
+    description: Unauthorized
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 401 Unauthorized.
+        displayName: Unauthorized Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "UNAUTHORIZED",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/401' failed: unauthorized (401).",
+              "timestamp": "2026-07-04T19:05:00.9654964-06:00",
+              "correlationId": "8c44c0a0-780d-11f1-b131-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "UNAUTHORIZED",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/401' failed: unauthorized (401).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  403:
+    description: Forbidden
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 403 Forbidden.
+        displayName: Forbidden Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "FORBIDDEN",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/403' failed: forbidden (403).",
+              "timestamp": "2026-07-04T19:12:12.578465-06:00",
+              "correlationId": "8cad9f21-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "FORBIDDEN",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/403' failed: forbidden (403).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  404:
+    description: Not Found
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 404 Not Found.
+        displayName: Not Found Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "NOT_FOUND",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/404' failed: not found (404).",
+              "timestamp": "2026-07-04T19:12:58.3799446-06:00",
+              "correlationId": "a8ad9720-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "NOT_FOUND",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/404' failed: not found (404).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  405:
+    description: Method Not Allowed
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 405 Method Not Allowed.
+        displayName: Method Not Allowed Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "METHOD_NOT_ALLOWED",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/405' failed: method not allowed (405).",
+              "timestamp": "2026-07-04T19:13:13.298538-06:00",
+              "correlationId": "b1b9dfe0-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "METHOD_NOT_ALLOWED",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/405' failed: method not allowed (405).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  406:
+    description: Not Acceptable
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 406 Not Acceptable.
+        displayName: Not Acceptable Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "NOT_ACCEPTABLE",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/406' failed: not acceptable (406).",
+              "details": "Client did not request a supported media type.",
+              "timestamp": "2026-07-04T19:13:27.7203328-06:00",
+              "correlationId": "ba525830-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "NOT_ACCEPTABLE",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/406' failed: not acceptable (406).",
+                      "details": "Client did not request a supported media type.",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  409:
+    description: Conflict
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 409 Conflict.
+        displayName: Conflict Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "CONFLICT",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/409' failed with status code 409.",
+              "timestamp": "2026-07-04T19:13:39.4293907-06:00",
+              "correlationId": "c14cb0e0-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "CONFLICT",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/409' failed with status code 409."
+                  }
+              ]
+          }
+
+  415:
+    description: Unsupported Media Type
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 415 Unsupported Media Type.
+        displayName: Unsupported Media Type Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "UNSUPPORTED_MEDIA_TYPE",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/415' failed: media type null not supported (415).",
+              "timestamp": "2026-07-04T19:14:26.9258862-06:00",
+              "correlationId": "dd3ddbd0-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "UNSUPPORTED_MEDIA_TYPE",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/415' failed: media type null not supported (415).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  422:
+    description: Unprocessable Entity
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 422 Unprocessable Entity.
+        displayName: Unprocessable Entity Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "UNPROCESSABLE_ENTITY",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/422' failed with status code 422.",
+              "timestamp": "2026-07-04T19:14:40.0230151-06:00",
+              "correlationId": "e56c20a0-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "UNPROCESSABLE_ENTITY",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/422' failed with status code 422."
+                  }
+              ]
+          }
+
+  429:
+    description: Too Many Requests
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 429 Too Many Requests.
+        displayName: Too Many Requests Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "TOO_MANY_REQUESTS",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/429' failed: too many requests (429).",
+              "timestamp": "2026-07-04T19:14:54.0230507-06:00",
+              "correlationId": "edc43490-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "TOO_MANY_REQUESTS",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/429' failed: too many requests (429).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  500:
+    description: Internal Server Error
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 500 Internal Server Error.
+        displayName: Internal Server Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "INTERNAL_SERVER_ERROR",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/500' failed: internal server error (500).",
+              "timestamp": "2026-07-04T19:15:06.2216052-06:00",
+              "correlationId": "f503ac90-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "INTERNAL_SERVER_ERROR",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/500' failed: internal server error (500).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  502:
+    description: Bad Gateway
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 502 Bad Gateway.
+        displayName: Bad Gateway Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "BAD_GATEWAY",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/502' failed: bad gateway (502).",
+              "timestamp": "2026-07-04T19:15:16.3418449-06:00",
+              "correlationId": "fb115b50-780e-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "BAD_GATEWAY",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/502' failed: bad gateway (502).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  503:
+    description: Service Unavailable
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 503 Service Unavailable.
+        displayName: Service Unavailable Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "SERVICE_UNAVAILABLE",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/503' failed: service unavailable (503).",
+              "timestamp": "2026-07-04T19:15:28.3665811-06:00",
+              "correlationId": "020c2930-780f-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "SERVICE_UNAVAILABLE",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/503' failed: service unavailable (503).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }
+
+  504:
+    description: Gateway Timeout
+    body:
+      application/json:
+        type: ErrorResponse
+        description: Standardized error response for HTTP 504 Gateway Timeout.
+        displayName: Gateway Timeout Error Response
+        example: |
+          {
+              "namespace": "GERMANVR-EX-SAPI",
+              "identifier": "GATEWAY_TIMEOUT",
+              "description": "HTTP GET on resource 'https://httpbin.org:443/status/504' failed: gateway timeout (504).",
+              "timestamp": "2026-07-04T19:15:39.7799255-06:00",
+              "correlationId": "090ac7a0-780f-11f1-8412-d8bbc10a9a17",
+              "application": {
+                  "muleName": "germanvr-example-sapi"
+              },
+              "errorChain": [
+                  {
+                      "namespace": "BIN_ORG",
+                      "identifier": "GATEWAY_TIMEOUT",
+                      "description": "HTTP GET on resource 'https://httpbin.org:443/status/504' failed: gateway timeout (504).",
+                      "failingComponent": "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"
+                  }
+              ]
+          }

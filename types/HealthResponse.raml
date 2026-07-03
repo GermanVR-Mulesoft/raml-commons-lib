@@ -1,0 +1,61 @@
+#%RAML 1.0 DataType
+description: Standardized payload for Liveness and Readiness endpoints.
+type: object
+properties:
+  status:
+    type: string
+    enum: [ UP, DOWN, DEGRADED ]
+    description: Computed global status of the API and its dependencies.
+    example: "UP"
+  timestamp:
+    type: datetime
+    description: Exact date and time of the evaluation.
+    example: "2026-07-02T19:45:14Z"
+  correlationId:
+    type: string
+    description: Traceability identifier for the request.
+    example: "489da391-012e-11f1-8968-5cb26d8882d5"
+  application:
+    type: object
+    description: Mule application metadata.
+    properties:
+      artifactId: 
+        type: string
+        example: "germanvr-example-sapi"
+      version: 
+        type: string
+        example: "1.0.0"
+      environment: 
+        type: string
+        example: "PROD"
+      muleVersion: 
+        type: string
+        example: "4.6.0"
+  dependencies?:
+    type: array
+    description: Array of statuses for the evaluated systems (Readiness).
+    items: 
+      type: object
+      properties:
+        name:
+          type: string
+          description: Name of the system, database, or API.
+          example: "Oracle Customer Master DB"
+        type:
+          type: string
+          description: Classification of the infrastructural dependency.
+          example: "DATABASE"
+        status:
+          type: string
+          enum: [ UP, DOWN, DEGRADED ]
+          description: Current status reported by the dependency.
+          example: "DEGRADED"
+        message?:
+          type: string
+          description: Additional error message if the status is DOWN or DEGRADED.
+          example: "Response time exceeded 2000ms threshold"
+        latencyMs?:
+          type: integer
+          description: Response time of the dependency in milliseconds.
+          example: 2150
+          

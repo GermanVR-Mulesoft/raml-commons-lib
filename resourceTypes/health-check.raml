@@ -1,0 +1,35 @@
+#%RAML 1.0 ResourceType
+description: Standard pattern for the health check endpoint.
+get:
+  description: Evaluates the Liveness and Readiness of the API.
+  responses:
+    200:
+      description: The API and all critical dependencies are operating normally.
+      body:
+        application/json:
+          type: HealthResponse
+          example: |
+            {
+              "status": "UP",
+              "timestamp": "2026-07-02T20:00:00Z",
+              "correlationId": "489da391-012e-11f1-8968-5cb26d8882d5",
+              "application": {
+                "artifactId": "germanvr-example-sapi",
+                "version": "1.0.0",
+                "environment": "PROD",
+                "muleVersion": "4.6.0"
+              },
+              "dependencies": [
+                {
+                  "name": "Oracle Customer Master DB",
+                  "type": "DATABASE",
+                  "status": "DEGRADED",
+                  "latencyMs": 2150
+                }
+              ]
+            }
+    503:
+      description: Service Unavailable. The API or at least one critical dependency is down.
+      body:
+        application/json:
+          type: HealthResponse

@@ -1,0 +1,44 @@
+#%RAML 1.0 DataType
+
+type: object
+properties:
+  namespace:
+    type: string
+    example: GERMANVR-EX-SAPI
+  identifier:
+    type: string
+    example: BAD_REQUEST
+  description:
+    type: string
+    example: "HTTP GET on resource 'https://httpbin.org:443/status/400' failed: bad request (400)."
+  timestamp:
+    type: datetime
+    example: 2026-05-27T13:07:58.1817521-06:00
+  correlationId:
+    type: string
+    example: 8b114036-b48b-4640-a3f7-b0f8b4a9cb98
+  application?:
+    type: object
+    properties:
+      muleName:
+        type: string
+        example: germanvr-example-sapi
+  errorChain?:
+    type: array
+    items:    
+      properties:
+        namespace:
+          type: string
+          example: BIN_ORG
+        identifier:
+          type: string
+          example: BAD_REQUEST
+        description:
+          type: string
+          example: "HTTP GET on resource 'https://httpbin.org:443/status/400' failed: bad request (400)."
+        details?:  
+          type: string
+          example: Peticion rechazada
+        failingComponent?:
+          type: string
+          example: "get-httpbin-client/processors/0 @ germanvr-example-sapi-1.0.0-mule-application:clients/httpbin-client.xml:11 (Request to LEGACY SYSTEM)"      

@@ -1,0 +1,31 @@
+#%RAML 1.0 ResourceType
+usage: Apply to resources that represent a collection of items.
+is: [ standard-policy ]
+
+get?:
+  displayName: Get <<resourcePathName>>
+  description: Retrieves a list of <<resourcePathName>>.
+
+post?:
+  displayName: Create or Process <<resourcePathName>>
+  description: Creates a new record or executes a process within <<resourcePathName>>.
+
+put?:
+  displayName: Replace in <<resourcePathName>>
+  description: Completely replaces records within <<resourcePathName>>.
+
+patch?:
+  displayName: Update in <<resourcePathName>>
+  description: Partially modifies records within <<resourcePathName>>.
+
+delete?:
+  displayName: Delete from <<resourcePathName>>
+  description: Permanently removes records from <<resourcePathName>>.
+
+head?:
+  displayName: Check <<resourcePathName>>
+  description: Retrieves the response headers for <<resourcePathName>>.
+
+options?:
+  displayName: <<resourcePathName>> options
+  description: Queries the allowed methods for <<resourcePathName>>.

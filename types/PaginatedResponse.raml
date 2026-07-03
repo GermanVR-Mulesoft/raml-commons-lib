@@ -1,0 +1,24 @@
+#%RAML 1.0 DataType
+description: Standardized base structure for any paginated API response.
+type: object
+properties:
+  meta:
+    description: Object containing the pagination metadata.
+    type: object
+    properties:
+      totalRecords:
+        description: The total number of existing records in the database that match the query.
+        type: integer
+        example: 520
+      offset:
+        description: The number of skipped records (must match the request).
+        type: integer
+        example: 0
+      limit:
+        description: The maximum size of the returned page (must match the request).
+        type: integer
+        example: 50
+  data:
+    description: The array containing the business objects.
+    type: array
+    items: any

@@ -1,0 +1,13 @@
+#%RAML 1.0 Trait
+usage: Apply this trait to allow clients to sort the returned collection.
+queryParameters:
+  sort?:
+    description: The field by which to sort the collection. Can be a comma-separated list for multiple fields.
+    type: string
+    example: "createdAt"
+  order?:
+    description: The sorting order (ascending or descending).
+    type: string
+    enum: [ asc, desc ]
+    default: desc
+    example: "desc"
